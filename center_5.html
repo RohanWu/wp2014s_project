@@ -116,7 +116,7 @@
                                 </p>
                             </a>
                             <div class="jumbotron">
-                                <h1>中央政府-報告查找</h1>
+                                <h1>中央政府-出國人員</h1>
                             </div>
                         </header>
                         <!--
@@ -141,10 +141,6 @@
                             <br />
                             <br />
                             <form  action="http://report.nat.g0v.tw/report/search/" method="post">
-                                <div class="form-datepicker cf">
-                                    <input type="text" id="from" name="Dfrom" value="" placeholder="開始日" />
-                                    <input type="text" id="to" name="Dto" value="" placeholder="結束日" />    
-                                </div>
                                 <div class="form-wrapper cf">
                                     <input type="text" placeholder="輸入查詢關鍵字..." name="key" value="" required>
                                     <button type="submit">Search</button>
@@ -155,69 +151,62 @@
                                   
                                 <div class="pagination quotes"><li class="current">1</li><li><a href="http://report.nat.g0v.tw/report/lists/2">2</a></li><li><a href="http://report.nat.g0v.tw/report/lists/3">3</a></li><li><a href="http://report.nat.g0v.tw/report/lists/4">4</a></li><li><a href="http://report.nat.g0v.tw/report/lists/5">5</a></li><li><a href="http://report.nat.g0v.tw/report/lists/2">下一頁&gt;</a></li><li><a href="http://report.nat.g0v.tw/report/lists/628">最後一頁</a></li></div>
 
-                                <table id="myTable" class="sortable" cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
-    
-                                    <thead>                              
-                                        <tr><th id="systemID" width="110">系統識別號</th><th width="30">計畫名稱</th><th>主辦機關</th><th width="120">出國開始</th><th width="120">出國結束</th><th id ="ReportLocation" width="10">地區</th><th width="10">人數</th></tr>
-                                    </thead>                              
-                                 
-                                    <tr class='even'><td>C10200768</td><td><a href="http://report.nat.g0v.tw/report/view/31320">國際護理協會四年期大會健康照護的公平性與可近性</a></td><td>國防部</td><td>2013-05-15</td><td>2013-05-24</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10201464</td><td><a href="http://report.nat.g0v.tw/report/view/31336">第14屆國際化學程序工業損害預防及安全促進研討會暨除污設備廠商參訪</a></td><td>行政院環境保護署</td><td>2013-05-09</td><td>2013-05-18</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10202536</td><td><a href="http://report.nat.g0v.tw/report/view/31351">赴韓處理財產移交相關事宜</a></td><td>行政院國家科學委員會</td><td>2013-05-15</td><td>2013-05-17</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10202531</td><td><a href="http://report.nat.g0v.tw/report/view/31350">102年度赴美國參加美國訓練與發展協會年會出國報告</a></td><td>行政院人事行政總處公務人力發展中心</td><td>2013-05-18</td><td>2013-05-26</td><td>1</td><td>2</td></tr>
-                                    <tr class='even'><td>C10201993</td><td><a href="http://report.nat.g0v.tw/report/view/31340">洽商台糖公司設置生質綠能沼氣中心可行性報告書</a></td><td>臺灣糖業股份有限公司</td><td>2013-07-15</td><td>2013-07-19</td><td>1</td><td>2</td></tr>
-                                    <tr ><td>C10201397</td><td><a href="http://report.nat.g0v.tw/report/view/31332">參加2013ASTD年會研習報告</a></td><td>台灣中油股份有限公司</td><td>2013-05-18</td><td>2013-05-26</td><td>1</td><td>2</td></tr>
-                                    <tr class='even'><td>C10201405</td><td><a href="http://report.nat.g0v.tw/report/view/31333">參加國際清算銀行(BIS)資產管理研討會心得報告書</a></td><td>中央銀行</td><td>2013-05-04</td><td>2013-05-12</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10202280</td><td><a href="http://report.nat.g0v.tw/report/view/31343">中國大陸醫療器材管理機構參訪</a></td><td>衛生福利部食品藥物管理署</td><td>2013-07-21</td><td>2013-07-26</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10201231</td><td><a href="http://report.nat.g0v.tw/report/view/31326">參加「紐約聯邦準備銀行金融機構監理專業課程」出國報告</a></td><td>金融監督管理委員會</td><td>2013-05-04</td><td>2013-05-12</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10201395</td><td><a href="http://report.nat.g0v.tw/report/view/31331">參加美國石油地質師學會（AAPG）2013年會及美國分公司探勘業務研討報告</a></td><td>台灣中油股份有限公司</td><td>2013-05-17</td><td>2013-05-26</td><td>1</td><td>3</td></tr>
-                                    <tr class='even'><td>C10202396</td><td><a href="http://report.nat.g0v.tw/report/view/31313">福建省政府訪問日本閩籍僑社活動</a></td><td>福建省政府</td><td>2013-07-12</td><td>2013-07-18</td><td>1</td><td>3</td></tr>
-                                    <tr ><td>C10201176</td><td><a href="http://report.nat.g0v.tw/report/view/31325">「銀行結構與競爭第四十九屆年會」報告</a></td><td>中央存款保險股份有限公司</td><td>2013-05-06</td><td>2013-05-12</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10202445</td><td><a href="http://report.nat.g0v.tw/report/view/31348">2013年馬來西亞臺灣高等教育展</a></td><td>國立中正大學</td><td>2013-07-21</td><td>2013-07-28</td><td>1</td><td>4</td></tr>
-                                    <tr ><td>C10202507</td><td><a href="http://report.nat.g0v.tw/report/view/31349">「2013光州亞洲論壇、光州民主化運動33週年紀念儀式」紀實</a></td><td>內政部</td><td>2013-05-15</td><td>2013-05-19</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10200838</td><td><a href="http://report.nat.g0v.tw/report/view/31323">第五屆海峽兩岸生物多樣性與森林保護文化研討會與參訪人工林經營</a></td><td>行政院農業委員會林業試驗所</td><td>2013-06-15</td><td>2013-06-21</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10201409</td><td><a href="http://report.nat.g0v.tw/report/view/31334">參加「2013年StateStreetOfficialInstitutionConference」心得報告</a></td><td>中央銀行</td><td>2013-05-11</td><td>2013-05-19</td><td>1</td><td>2</td></tr>
-                                    <tr class='even'><td>C10201575</td><td><a href="http://report.nat.g0v.tw/report/view/31338">出席國際醫藥品稽查協約組織（PIC/S）會員代表大會暨參訪歐洲藥品品質與衛生保健管理理事會（EDQM）</a></td><td>行政院衛生署食品藥物管理局</td><td>2013-05-26</td><td>2013-06-02</td><td>2</td><td>2</td></tr>
-                                    <tr ><td>C10202181</td><td><a href="http://report.nat.g0v.tw/report/view/31341">赴美國參加國際縱火調查協會年會</a></td><td>內政部消防署</td><td>2013-05-04</td><td>2013-05-11</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10202090</td><td><a href="http://report.nat.g0v.tw/report/view/31303">出席APEC「貿易融資研討會」出國報告</a></td><td>金融監督管理委員會銀行局</td><td>2013-06-30</td><td>2013-07-02</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10200794</td><td><a href="http://report.nat.g0v.tw/report/view/31322">參加聯合國巴塞爾、鹿特丹及斯德哥爾摩三公約大會-斯德哥爾摩公約第六次締約國大會</a></td><td>行政院環境保護署</td><td>2013-04-25</td><td>2013-05-08</td><td>1</td><td>2</td></tr>
-                                    <tr class='even'><td>C10201390</td><td><a href="http://report.nat.g0v.tw/report/view/31330">參加第一屆國際公營資產管理公司論壇課程報告</a></td><td>中央存款保險股份有限公司</td><td>2013-05-27</td><td>2013-05-29</td><td>1</td><td>2</td></tr>
-                                    <tr ><td>C10201475</td><td><a href="http://report.nat.g0v.tw/report/view/31337">國際存款保險機構協會歐洲執行委員會國際研討會摘要報告</a></td><td>中央存款保險股份有限公司</td><td>2013-05-26</td><td>2013-05-30</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10201228</td><td><a href="http://report.nat.g0v.tw/report/view/31234">參加第24屆血液病毒基因擴增技術標準化研討會報告</a></td><td>行政院衛生署食品藥物管理局</td><td>2013-05-06</td><td>2013-05-11</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10200776</td><td><a href="http://report.nat.g0v.tw/report/view/31321">第三屆世界研究倫理大會與會報告</a></td><td>行政院國家科學委員會</td><td>2013-05-03</td><td>2013-05-10</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10201273</td><td><a href="http://report.nat.g0v.tw/report/view/31327">參加國際存款保險機構協會亞太區域委員會第十一屆年會暨國際研討會報告</a></td><td>中央存款保險股份有限公司</td><td>2013-05-13</td><td>2013-05-16</td><td>1</td><td>2</td></tr>
-                                    <tr ><td>C10201830</td><td><a href="http://report.nat.g0v.tw/report/view/31339">2013年Purvin Gertz第17屆亞洲LPG年會報告書</a></td><td>台灣中油股份有限公司</td><td>2013-06-11</td><td>2013-06-14</td><td>1</td><td>2</td></tr>
-                                    <tr class='even'><td>C10202364</td><td><a href="http://report.nat.g0v.tw/report/view/31345">大壩修復及維護技術研習</a></td><td>經濟部水利署水利規劃試驗所</td><td>2013-06-09</td><td>2013-06-21</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10200897</td><td><a href="http://report.nat.g0v.tw/report/view/20196">「細懸浮微粒人工監測與自動監測比對系統技術」研習心得報告</a></td><td>行政院環境保護署環境檢驗所</td><td>2013-04-27</td><td>2013-05-06</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10201404</td><td><a href="http://report.nat.g0v.tw/report/view/20310">參加英國英格蘭銀行研訓中心訓練課程「中央銀行人員所需模型之介紹」出國報告</a></td><td>中央銀行</td><td>2013-04-27</td><td>2013-05-05</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10202225</td><td><a href="http://report.nat.g0v.tw/report/view/20399">參加2013IEAM亞太工程師暨國際工程師協調委員會年度會議出國報告</a></td><td>行政院公共工程委員會</td><td>2013-06-16</td><td>2013-06-22</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10201788</td><td><a href="http://report.nat.g0v.tw/report/view/31288">綠博物館永續經營實務專題研究</a></td><td>國立科學工藝博物館</td><td>2013-05-01</td><td>2013-05-10</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10202429</td><td><a href="http://report.nat.g0v.tw/report/view/31314">出席2013年亞太經濟合作會議(APEC)經濟委員會第二次會議(EC2)暨相關會議出國報告</a></td><td>行政院經濟建設委員會</td><td>2013-06-25</td><td>2013-07-01</td><td>1</td><td>24</td></tr>
-                                    <tr class='even'><td>C10201429</td><td><a href="http://report.nat.g0v.tw/report/view/31335">愛滋病陽性個案預防及個案管理研習</a></td><td>行政院衛生署疾病管制局</td><td>2013-05-28</td><td>2013-06-03</td><td>1</td><td>2</td></tr>
-                                    <tr ><td>C10202242</td><td><a href="http://report.nat.g0v.tw/report/view/31342">參加「海基會關懷山東臺商參訪團」出國報告</a></td><td>金融監督管理委員會</td><td>2013-07-16</td><td>2013-07-19</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10202060</td><td><a href="http://report.nat.g0v.tw/report/view/20381">赴馬來西亞(西馬)辦理第33期海外青年技術訓練班招生宣導說明會及拜會留臺校友社團與畢業僑生</a></td><td>僑務委員會</td><td>2013-06-26</td><td>2013-07-03</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10202061</td><td><a href="http://report.nat.g0v.tw/report/view/20382">赴馬來西亞(東馬)辦理第33期海外青年技術訓練班招生宣導說明會及拜會留臺校友社團與畢業僑生</a></td><td>僑務委員會</td><td>2013-06-27</td><td>2013-07-04</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10202070</td><td><a href="http://report.nat.g0v.tw/report/view/20384">2013年赴菲律賓辦理臺灣觀光推廣暨展銷會</a></td><td>交通部觀光局</td><td>2013-05-01</td><td>2013-05-06</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10202058</td><td><a href="http://report.nat.g0v.tw/report/view/31299">2013年海峽兩岸大學校長論壇暨科學技術研討會</a></td><td>國立高雄大學</td><td>2013-07-10</td><td>2013-07-13</td><td>1</td><td>2</td></tr>
-                                    <tr class='even'><td>C10201306</td><td><a href="http://report.nat.g0v.tw/report/view/31328">考察「日本道路工程及公共設施雨水貯留設施及設計」</a></td><td>內政部營建署</td><td>2013-05-14</td><td>2013-05-18</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10202330</td><td><a href="http://report.nat.g0v.tw/report/view/31344">北京航空航天大學夏令營2013</a></td><td>國立中正大學</td><td>2013-07-11</td><td>2013-07-18</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10202432</td><td><a href="http://report.nat.g0v.tw/report/view/31347">2013年江蘇光電經貿參訪團</a></td><td>經濟部投資審議委員會</td><td>2013-07-02</td><td>2013-07-08</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10201229</td><td><a href="http://report.nat.g0v.tw/report/view/20278">參與美國藥典溶離度之理論及最佳實踐訓練</a></td><td>行政院衛生署食品藥物管理局</td><td>2013-05-06</td><td>2013-05-10</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10201262</td><td><a href="http://report.nat.g0v.tw/report/view/20286">出席2013年國際證券管理機構組織亞太區域委員會會議(IOSCOAPRC)報告</a></td><td>金融監督管理委員會證券期貨局</td><td>2013-04-27</td><td>2013-05-02</td><td>1</td><td>3</td></tr>
-                                    <tr ><td>C10201109</td><td><a href="http://report.nat.g0v.tw/report/view/31324">赴美國消防學院實習火場指揮與火災控制</a></td><td>內政部消防署</td><td>2013-04-19</td><td>2013-05-02</td><td>1</td><td>2</td></tr>
-                                    <tr class='even'><td>C10201312</td><td><a href="http://report.nat.g0v.tw/report/view/31329">2013日本FOOMA國際食品工業機械展出國報告</a></td><td>臺灣糖業股份有限公司</td><td>2013-06-11</td><td>2013-06-15</td><td>1</td><td>2</td></tr>
-                                    <tr ><td>C10202369</td><td><a href="http://report.nat.g0v.tw/report/view/31346">赴日本參加「2013國際醫學工程年會」出國報告</a></td><td>輔導會臺北榮民總醫院</td><td>2013-07-03</td><td>2013-07-05</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10200797</td><td><a href="http://report.nat.g0v.tw/report/view/20169">參加2013年台義雙邊生命科學研討會及「BIO2013生技大會」暨對外拓商生技產業訪問團</a></td><td>行政院國家科學委員會</td><td>2013-04-16</td><td>2013-04-28</td><td>2</td><td>2</td></tr>
-                                    <tr ><td>C10200944</td><td><a href="http://report.nat.g0v.tw/report/view/20208">參訪德國慕尼黑雷射展、研發機構及相關企業報告</a></td><td>經濟部</td><td>2013-05-11</td><td>2013-05-19</td><td>1</td><td>1</td></tr>
-                                    <tr class='even'><td>C10200993</td><td><a href="http://report.nat.g0v.tw/report/view/20224">中央銀行統計：國內與國際之挑戰</a></td><td>中央銀行</td><td>2013-04-20</td><td>2013-04-27</td><td>1</td><td>1</td></tr>
-                                    <tr ><td>C10201091</td><td><a href="http://report.nat.g0v.tw/report/view/20255">參加美洲國家稅務主管中心(CIAT)第47屆年會會議報告</a></td><td>財政部賦稅署</td><td>2013-04-20</td><td>2013-05-01</td><td>1</td><td>1</td></tr>
-   
-   
+                                <table class="sortable" cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
+                                    <tr><td width="150">出國次數</th><td width="120">姓名</th><td width="20%">服務機關</th><td>服務單位</th><td width="120">職稱</th><td width="120">官職等</th></tr>
+                                    <tr class='even'><td>32</td><td><a href="http://report.nat.g0v.tw/abroad/view/張慶瑞">張慶瑞</a></td><td>行政院國家科學委員會</td><td>國合處</td><td>處長</td><td>簡任</td></tr>
+                                    <tr ><td>30</td><td><a href="http://report.nat.g0v.tw/abroad/view/廖惠貞">廖惠貞</a></td><td>中國石油股份有限公司</td><td>業務處</td><td>組長</td><td>其他</td></tr>
+                                    <tr class='even'><td>29</td><td><a href="http://report.nat.g0v.tw/abroad/view/李信">李信</a></td><td>國立暨南國際大學</td><td>教務處</td><td>課務組組長</td><td>薦任</td></tr>
+                                    <tr ><td>29</td><td><a href="http://report.nat.g0v.tw/abroad/view/唐永奇">唐永奇</a></td><td>經濟部標準檢驗局</td><td>第六組</td><td>技士</td><td>委任</td></tr>
+                                    <tr class='even'><td>29</td><td><a href="http://report.nat.g0v.tw/abroad/view/宋海笙">宋海笙</a></td><td>行政院國軍退除役官兵輔導委員會</td><td>第七處</td><td>處長</td><td>簡任</td></tr>
+                                    <tr ><td>28</td><td><a href="http://report.nat.g0v.tw/abroad/view/傅顯達">傅顯達</a></td><td>行政院國家科學委員會</td><td>國合處</td><td>研究員</td><td>聘、雇</td></tr>
+                                    <tr class='even'><td>28</td><td><a href="http://report.nat.g0v.tw/abroad/view/官文霖">官文霖</a></td><td>行政院飛航安全委員會</td><td>調查實驗室</td><td>主任</td><td>聘、雇</td></tr>
+                                    <tr ><td>27</td><td><a href="http://report.nat.g0v.tw/abroad/view/林又新">林又新</a></td><td>中國石油股份有限公司</td><td>董事長室</td><td>顧問</td><td>其他</td></tr>
+                                    <tr class='even'><td>27</td><td><a href="http://report.nat.g0v.tw/abroad/view/夏慕梅">夏慕梅</a></td><td>科學工業園區管理局</td><td>投資組</td><td>副研究員</td><td>聘、雇</td></tr>
+                                    <tr ><td>27</td><td><a href="http://report.nat.g0v.tw/abroad/view/蔡天享">蔡天享</a></td><td>行政院農業委員會漁業署</td><td>遠洋漁業組</td><td>技正</td><td>薦任</td></tr>
+                                    <tr class='even'><td>26</td><td><a href="http://report.nat.g0v.tw/abroad/view/陳貴明">陳貴明</a></td><td>台灣電力股份有限公司</td><td>燃料處</td><td>處長</td><td>其他</td></tr>
+                                    <tr ><td>26</td><td><a href="http://report.nat.g0v.tw/abroad/view/蘇玉龍">蘇玉龍</a></td><td>國立暨南國際大學</td><td>教務處</td><td>教務長</td><td>簡任</td></tr>
+                                    <tr class='even'><td>26</td><td><a href="http://report.nat.g0v.tw/abroad/view/謝翰璋">謝翰璋</a></td><td>經濟部標準檢驗局</td><td>第六組</td><td>科長</td><td>薦任</td></tr>
+                                    <tr ><td>25</td><td><a href="http://report.nat.g0v.tw/abroad/view/林文通">林文通</a></td><td>教育部</td><td>文教處</td><td>副處長</td><td>簡任</td></tr>
+                                    <tr class='even'><td>25</td><td><a href="http://report.nat.g0v.tw/abroad/view/林頂榮">林頂榮</a></td><td>行政院農業委員會漁業署</td><td>遠洋漁業組</td><td>技士</td><td>薦任</td></tr>
+                                    <tr ><td>25</td><td><a href="http://report.nat.g0v.tw/abroad/view/黃鴻燕">黃鴻燕</a></td><td>行政院農業委員會漁業署</td><td>遠洋漁業組</td><td>科長</td><td>薦任</td></tr>
+                                    <tr class='even'><td>25</td><td><a href="http://report.nat.g0v.tw/abroad/view/蔡日耀">蔡日耀</a></td><td>行政院農業委員會漁業署</td><td>遠洋漁業組</td><td>組長</td><td>簡任</td></tr>
+                                    <tr ><td>24</td><td><a href="http://report.nat.g0v.tw/abroad/view/陳鳴輝">陳鳴輝</a></td><td>交通部民用航空局</td><td>標準組</td><td>約聘人員</td><td>聘、雇</td></tr>
+                                    <tr class='even'><td>23</td><td><a href="http://report.nat.g0v.tw/abroad/view/徐振湖">徐振湖</a></td><td>台灣電力股份有限公司</td><td>燃料處</td><td>課長</td><td>其他</td></tr>
+                                    <tr ><td>23</td><td><a href="http://report.nat.g0v.tw/abroad/view/古源光">古源光</a></td><td>國立屏東科技大學</td><td>食品科學系</td><td>教授</td><td>其他</td></tr>
+                                    <tr class='even'><td>23</td><td><a href="http://report.nat.g0v.tw/abroad/view/范以端">范以端</a></td><td>中央存款保險股份有限公司</td><td>國際關係暨研究室</td><td>副主任</td><td>薦任</td></tr>
+                                    <tr ><td>22</td><td><a href="http://report.nat.g0v.tw/abroad/view/鄧添來">鄧添來</a></td><td>交通部</td><td>郵電司</td><td>司長</td><td>簡任</td></tr>
+                                    <tr class='even'><td>22</td><td><a href="http://report.nat.g0v.tw/abroad/view/張水鍇">張水鍇</a></td><td>行政院農業委員會漁業署</td><td>遠洋漁業開發中心</td><td>副研究員</td><td>薦任</td></tr>
+                                    <tr ><td>22</td><td><a href="http://report.nat.g0v.tw/abroad/view/吳明機">吳明機</a></td><td>經濟部</td><td>技術處</td><td>副處長</td><td>簡任</td></tr>
+                                    <tr class='even'><td>22</td><td><a href="http://report.nat.g0v.tw/abroad/view/張金田">張金田</a></td><td>交通部民用航空局</td><td>標準組</td><td>專門委員</td><td>簡任</td></tr>
+                                    <tr ><td>22</td><td><a href="http://report.nat.g0v.tw/abroad/view/林俊良">林俊良</a></td><td>交通部民用航空局</td><td>標準組</td><td>專門委員</td><td>簡任</td></tr>
+                                    <tr class='even'><td>22</td><td><a href="http://report.nat.g0v.tw/abroad/view/吳志揚">吳志揚</a></td><td>國立中正大學</td><td>數學系</td><td>校長</td><td>教師</td></tr>
+                                    <tr ><td>21</td><td><a href="http://report.nat.g0v.tw/abroad/view/林珍妤">林珍妤</a></td><td>國立暨南國際大學</td><td>海外聯招會</td><td>專任助理(隨團秘書)</td><td>薦任</td></tr>
+                                    <tr class='even'><td>21</td><td><a href="http://report.nat.g0v.tw/abroad/view/施慧玲">施慧玲</a></td><td>國立中正大學</td><td>國際交流事務中心</td><td>教授兼中心主任</td><td>簡任</td></tr>
+                                    <tr ><td>21</td><td><a href="http://report.nat.g0v.tw/abroad/view/王興中">王興中</a></td><td>行政院飛航安全委員會</td><td>飛航安全組</td><td>飛航安全官</td><td>聘、雇</td></tr>
+                                    <tr class='even'><td>20</td><td><a href="http://report.nat.g0v.tw/abroad/view/簡宏偉">簡宏偉</a></td><td>行政院研究發展考核委員會</td><td>資訊管理處</td><td>分析師</td><td>薦任</td></tr>
+                                    <tr ><td>20</td><td><a href="http://report.nat.g0v.tw/abroad/view/呂木琳">呂木琳</a></td><td>教育部</td><td>常務次長室</td><td>常務次長</td><td>其他</td></tr>
+                                    <tr class='even'><td>20</td><td><a href="http://report.nat.g0v.tw/abroad/view/蔡昭儀">蔡昭儀</a></td><td>國立臺灣美術館</td><td>展覽組</td><td>助理研究員</td><td>薦任</td></tr>
+                                    <tr ><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/任曾平">任曾平</a></td><td>台灣電力股份有限公司</td><td>燃料處</td><td>燃煤課長</td><td>薦任</td></tr>
+                                    <tr class='even'><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/姜斐晴">姜斐晴</a></td><td>中國石油股份有限公司</td><td>業務處</td><td>管理師</td><td>其他</td></tr>
+                                    <tr ><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/陳炎鐘">陳炎鐘</a></td><td>中國石油股份有限公司</td><td>總工程師室</td><td>採購師</td><td>其他</td></tr>
+                                    <tr class='even'><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/劉啟超">劉啟超</a></td><td>行政院農業委員會漁業署</td><td>遠洋漁業組</td><td>專員</td><td>薦任</td></tr>
+                                    <tr ><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/沙志一">沙志一</a></td><td>行政院農業委員會漁業署</td><td>副署長室</td><td>副署長</td><td>簡任</td></tr>
+                                    <tr class='even'><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/李素華">李素華</a></td><td>經濟部</td><td>經貿談判代表辦公室</td><td>談判代表</td><td>簡任</td></tr>
+                                    <tr ><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/陳昭義">陳昭義</a></td><td>經濟部工業局</td><td>工業局</td><td>局長</td><td>簡任</td></tr>
+                                    <tr class='even'><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/林宗泰">林宗泰</a></td><td>行政院國家科學委員會</td><td>國合處</td><td>處長</td><td>簡任</td></tr>
+                                    <tr ><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/姚禹全">姚禹全</a></td><td>交通部民用航空局</td><td>標準組</td><td>約聘人員</td><td>聘、雇</td></tr>
+                                    <tr class='even'><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/黃英忠">黃英忠</a></td><td>國立高雄大學</td><td>校長室</td><td>校長</td><td>簡任</td></tr>
+                                    <tr ><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/陳炯曉">陳炯曉</a></td><td>經濟部能源局</td><td>綜合企劃組</td><td>代理科長</td><td>其他</td></tr>
+                                    <tr class='even'><td>18</td><td><a href="http://report.nat.g0v.tw/abroad/view/黃鴻棋">黃鴻棋</a></td><td>中央存款保險股份有限公司</td><td>國際關係暨研究室</td><td>秘書</td><td>薦任</td></tr>
+                                    <tr ><td>17</td><td><a href="http://report.nat.g0v.tw/abroad/view/黃子彬">黃子彬</a></td><td>行政院農業委員會</td><td>農糧處</td><td>科長</td><td>簡任</td></tr>
+                                    <tr class='even'><td>17</td><td><a href="http://report.nat.g0v.tw/abroad/view/王聖傑">王聖傑</a></td><td>中國石油股份有限公司</td><td>會計處</td><td>管理師</td><td>其他</td></tr>
+                                    <tr ><td>17</td><td><a href="http://report.nat.g0v.tw/abroad/view/徐永耀">徐永耀</a></td><td>中國石油股份有限公司</td><td>探採事業部</td><td>處長</td><td>其他</td></tr>
+                                    <tr class='even'><td>17</td><td><a href="http://report.nat.g0v.tw/abroad/view/陳玉琛">陳玉琛</a></td><td>行政院農業委員會漁業署</td><td>遠洋漁業組</td><td>副組長</td><td>簡任</td></tr>
+                                    <tr ><td>17</td><td><a href="http://report.nat.g0v.tw/abroad/view/張金樹">張金樹</a></td><td>臺灣糖業股份有限公司</td><td>畜殖事業部</td><td>動物保健技師</td><td>薦任</td></tr>
                                 </table>
                                   
                                 <div class="pagination quotes"><li class="current">1</li><li><a href="http://report.nat.g0v.tw/report/lists/2">2</a></li><li><a href="http://report.nat.g0v.tw/report/lists/3">3</a></li><li><a href="http://report.nat.g0v.tw/report/lists/4">4</a></li><li><a href="http://report.nat.g0v.tw/report/lists/5">5</a></li><li><a href="http://report.nat.g0v.tw/report/lists/2">下一頁&gt;</a></li><li><a href="http://report.nat.g0v.tw/report/lists/628">最後一頁</a></li></div>      
 
-  
                             </div>
                         </div>    
             
