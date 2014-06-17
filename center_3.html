@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    -->
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta property="og:title" content="公務員出國考察追蹤網-國家統計" />
+    <meta property="og:description" content="" />
+    <title>公務員出國考察追蹤網-國家統計</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://report.nat.g0v.tw/includes/pushMenu/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="http://report.nat.g0v.tw/includes/pushMenu/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="http://report.nat.g0v.tw/includes/pushMenu/css/component.css" />
+    -->
+    
+    <link href="http://report.nat.g0v.tw/includes/bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://report.nat.g0v.tw/includes/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="http://report.nat.g0v.tw/includes/templtes/02/css/basic.css" rel="stylesheet">  
+
+    <link href="basic.css" rel="stylesheet">
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://report.nat.g0v.tw/includes/templtes/01/images/css/style.css" />
+    -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+    <script src="http://report.nat.g0v.tw/includes/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script> 
+    <!-- 
+    <script type="text/javascript" src="http://report.nat.g0v.tw/includes/pushMenu/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="http://report.nat.g0v.tw/includes/pushMenu/js/classie.js"></script>
+    <script type="text/javascript" src="http://report.nat.g0v.tw/includes/pushMenu/js/mlpushmenu.js"></script>
+    -->
+    <!--
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    -->
+</head>
+<body>
+
+    <style id="jsbin-css">
+            
+            header {top:3em;}
+
+            aside {top:3em;}
+
+            body {
+                background-attachment: fixed; 
+                background-image: url(http://subtlepatterns.com/patterns/squared_metal.png); 
+                background-repeat: repeat; 
+            }
+
+            article {
+                padding:3em;
+                background-attachment: fixed; 
+                background-image: url(http://subtlepatterns.com/patterns/lightpaperfibers.png); 
+                background-repeat: repeat; 
+            }
+
+            .container_12 {
+                box-shadow:1px 4px 12px -2px rgba(20%,20%,40%,0.5);
+                background-attachment: fixed; 
+                background-image: url(http://subtlepatterns.com/patterns/lightpaperfibers.png);
+                background-repeat: repeat; 
+            }
+
+            h1 {
+                text-shadow:1px 1px 0 rgba(224,224,224,1);
+                font-weight:bold;
+                color:#000000;
+                letter-spacing:1pt;
+                word-spacing:-1pt;
+                font-size:25px;
+                text-align:center;
+                font-family:arial, helvetica, sans-serif;
+                line-height:0.25;
+            }
+            
+            footer {
+                padding-bottom: 10px;
+            }
+
+            .catetype h3{font-size: 20px;}
+            .catetype h4{font-size: 16px;}
+            .catetype li{float: left;width: 20%;line-height: 30px;font-size: 13px;}
+
+        </style>
+
+
+
+
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                    <div class="container">
+                
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="index.html">公務人員出國考察網</a>
+                        </div>
+                
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">中央政府<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="center_1.html">報告查找</a></li>
+                                        <li><a href="center_2.html">主題分類</a></li>
+                                        <li><a href="center_3.html">國家統計</a></li>
+                                        <li><a href="#">部會分類</a></li>
+                                        <li><a href="center_5.html">出國人員</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">地方政府<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">台北市</a></li>
+                                        <li><a href="#">新北市</a></li>
+                                        <li><a href="#">台中市</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+<div class="container">
+    <header class="row row-offcanvas row-offcanvas-right"><style>
+    #main
+    {
+        width:100%;
+        magin: 0 auto;
+        background-color: #fff;
+        color: #888;
+        font-size:12px;
+    }
+    #visualization
+    {
+        width:800px;
+        magin: 0 auto;
+    }
+    #countryList
+    {
+        font-size:14px;
+        padding:20px;
+        width:340px;
+        height:580px;
+        float:right;
+        margin-top:10px;
+        overflow:auto;
+    }
+    #countryList li
+    {
+        float:left;
+        width:130px;
+        line-height:30px;
+    }
+    
+</style>
+
+<script type="text/javascript">
+    google.load('visualization', '1', {packages: ['geochart']});
+    function drawVisualization() {
+        var data = google.visualization.arrayToDataTable([
+            ['國家', '次數'],
+                        ['美國', 605],
+                        ['中國', 546],
+                        ['日本', 447],
+                        ['韓國', 161],
+                        ['新加坡', 152],
+                        ['英國', 124],
+                        ['馬來西亞', 118],
+                        ['泰國', 113],
+                        ['香港', 104],
+                        ['德國', 102],
+                        ['法國', 99],
+                        ['澳大利亞', 84],
+                        ['瑞士', 76],
+                        ['加拿大', 59],
+                        ['印尼', 59],
+                        ['越南', 55],
+                        ['菲律賓', 53],
+                        ['俄羅斯', 53],
+                        ['荷蘭', 44],
+                        ['比利時', 40],
+                        ['奧地利', 33],
+                        ['印度', 32],
+                        ['義大利', 28],
+                        ['紐西蘭', 24],
+                        ['澳門', 24],
+                        ['瑞典', 21],
+                        ['西班牙', 20],
+                        ['捷克', 17],
+                        ['巴西', 16],
+                        ['芬蘭', 15],
+                        ['南非', 13],
+                        ['丹麥', 13],
+                        ['卡達', 12],
+                        ['波蘭', 11],
+                        ['以色列', 11],
+                        ['阿拉伯聯合大公國', 10],
+                        ['土耳其', 9],
+                        ['葡萄牙', 8],
+                        ['愛爾蘭', 7],
+                        ['斯里蘭卡', 6],
+                        ['愛沙尼亞', 6],
+                        ['柬埔寨', 6],
+                        ['智利', 6],
+                        ['挪威', 6],
+                        ['帛琉群島', 5],
+                        ['希臘', 5],
+                        ['科威特', 5],
+                        ['墨西哥', 5],
+                        ['哥斯大黎加', 4],
+                        ['羅馬尼亞', 4],
+                        ['緬甸', 4],
+                        ['蒙古', 4],
+                        ['烏克蘭', 3],
+                        ['匈牙利', 3],
+                        ['列支敦斯堡', 3],
+                        ['塞爾維亞', 3],
+                        ['宏都拉斯', 3],
+                        ['關島', 3],
+                        ['歐洲', 3],
+                        ['斯洛伐克', 2],
+                        ['巴拿馬', 2],
+                        ['盧森堡', 2],
+                        ['蘇聯', 2],
+                        ['沙烏地阿拉伯', 2],
+                        ['肯亞', 2],
+                        ['約旦', 2],
+                        ['波多黎各', 2],
+                        ['瓜地馬拉', 2],
+                        ['斐濟群島', 2],
+                        ['保加利亞', 2],
+                        ['汶萊', 2],
+                        ['薩爾瓦多', 2],
+                        ['伊朗', 2],
+                        ['外蒙古', 1],
+                        ['阿根廷', 1],
+                        ['巴拉圭', 1],
+                        ['厄瓜多', 1],
+                        ['布吉納法索', 1],
+                        ['史瓦濟蘭', 1],
+                        ['開曼群島', 1],
+                        ['聖多美及普林西比', 1],
+                        ['多明尼加', 1],
+                        ['尼泊爾', 1],
+                        ['法屬玻里尼西亞', 1],
+                        ['哥倫比亞', 1],
+                        ['馬爾地夫', 1],
+                        ['拉脫維亞', 1],
+                        ['斯洛維尼亞', 1],
+                        ['中非', 1],
+                        ['塞席爾', 1],
+                        ['巴布亞紐幾內亞', 1],
+                        ['阿布達比', 1],
+                        ['馬達加斯加', 1],
+                        ['模里西斯', 1],
+                        ['蘇丹', 1],
+                        ['埃及', 1],
+                        ['索羅門群島', 1],
+                        ['甘比亞', 1],
+                    ]);
+        var geochart = new google.visualization.GeoChart(document.getElementById('visualization'));
+        geochart.draw(data, {width: 800, height: 600});
+    }
+    google.setOnLoadCallback(drawVisualization);
+</script>
+
+                <div class="container">
+                    <div class="row row-offcanvas row-offcanvas-right">
+                
+                        <header class="col-xs-12 col-sm-9">
+                            <a href="http://report.nat.g0v.tw/" title="公務員出國考察追蹤網-Home">
+                                <h1 align = center>公務員出國考察追蹤網</h1>
+                                <p style="font-weight:bold;color:#9C9C9C;letter-spacing:1pt;word-spacing:-1pt;font-size:12px;text-align:center;font-family:arial, helvetica, sans-serif;line-height:2;" align = center>
+                                    追蹤公務人員出國考察行程人數
+                                </p>
+                            </a>
+                        </header>
+                        <!--
+                        <aside class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                            <div class="list-group">
+                                <a href="center_1.html" class="list-group-item">報告查找</a>
+                                <a href="center_2.html" class="list-group-item active">主題分類</a>
+                                <a href="#" class="list-group-item">國家統計</a>
+                                <a href="#" class="list-group-item">部會分類</a>
+                                <a href="#" class="list-group-item">出國人員</a>
+                            </div>
+                        </aside>
+                        -->
+                    </div>
+                </div>
+
+<div id="main">
+    <div class="content">
+        <b>國家統計</b>
+        <div style="float:right">
+        <form class="form-wrapper cf" action="http://report.nat.g0v.tw/country/datelist/" method="post">
+        <input type="text" id="from" name="Dfrom" value="2012-01-01" placeholder="開始日" />~<input type="text" id="to" name="Dto" value="2012-12-31" placeholder="結束日"/>
+        <input type="submit" value="送出" />
+        </form>
+        </div>
+        <div style="clear:both"></div>
+        <div id="countryList">
+        <ol type="circle"> 
+                    <li>美國 / 605</li>
+                    <li>中國大陸 / 546</li>
+                    <li>日本 / 447</li>
+                    <li>韓國 / 161</li>
+                    <li>新加坡 / 152</li>
+                    <li>英國 / 124</li>
+                    <li>馬來西亞 / 118</li>
+                    <li>泰國 / 113</li>
+                    <li>香港 / 104</li>
+                    <li>德國 / 102</li>
+                    <li>法國 / 99</li>
+                    <li>澳大利亞 / 84</li>
+                    <li>瑞士 / 76</li>
+                    <li>加拿大 / 59</li>
+                    <li>印尼 / 59</li>
+                    <li>越南 / 55</li>
+                    <li>菲律賓 / 53</li>
+                    <li>俄羅斯 / 53</li>
+                    <li>荷蘭 / 44</li>
+                    <li>比利時 / 40</li>
+                    <li>奧地利 / 33</li>
+                    <li>印度 / 32</li>
+                    <li>義大利 / 28</li>
+                    <li>紐西蘭 / 24</li>
+                    <li>澳門 / 24</li>
+                    <li>瑞典 / 21</li>
+                    <li>西班牙 / 20</li>
+                    <li>捷克 / 17</li>
+                    <li>巴西 / 16</li>
+                    <li>芬蘭 / 15</li>
+                    <li>南非 / 13</li>
+                    <li>丹麥 / 13</li>
+                    <li>卡達 / 12</li>
+                    <li>波蘭 / 11</li>
+                    <li>以色列 / 11</li>
+                    <li>阿拉伯聯合大公國 / 10</li>
+                    <li>土耳其 / 9</li>
+                    <li>葡萄牙 / 8</li>
+                    <li>愛爾蘭 / 7</li>
+                    <li>斯里蘭卡 / 6</li>
+                    <li>愛沙尼亞 / 6</li>
+                    <li>柬埔寨 / 6</li>
+                    <li>智利 / 6</li>
+                    <li>挪威 / 6</li>
+                    <li>帛琉群島 / 5</li>
+                    <li>希臘 / 5</li>
+                    <li>科威特 / 5</li>
+                    <li>墨西哥 / 5</li>
+                    <li>哥斯大黎加 / 4</li>
+                    <li>羅馬尼亞 / 4</li>
+                    <li>緬甸 / 4</li>
+                    <li>蒙古 / 4</li>
+                    <li>烏克蘭 / 3</li>
+                    <li>匈牙利 / 3</li>
+                    <li>列支敦斯堡 / 3</li>
+                    <li>塞爾維亞 / 3</li>
+                    <li>宏都拉斯 / 3</li>
+                    <li>關島 / 3</li>
+                    <li>歐洲 / 3</li>
+                    <li>斯洛伐克 / 2</li>
+                    <li>巴拿馬 / 2</li>
+                    <li>盧森堡 / 2</li>
+                    <li>蘇聯 / 2</li>
+                    <li>沙烏地阿拉伯 / 2</li>
+                    <li>肯亞 / 2</li>
+                    <li>約旦 / 2</li>
+                    <li>波多黎各 / 2</li>
+                    <li>瓜地馬拉 / 2</li>
+                    <li>斐濟群島 / 2</li>
+                    <li>保加利亞 / 2</li>
+                    <li>汶萊 / 2</li>
+                    <li>薩爾瓦多 / 2</li>
+                    <li>伊朗 / 2</li>
+                    <li>外蒙古 / 1</li>
+                    <li>阿根廷 / 1</li>
+                    <li>巴拉圭 / 1</li>
+                    <li>厄瓜多 / 1</li>
+                    <li>布吉納法索 / 1</li>
+                    <li>史瓦濟蘭 / 1</li>
+                    <li>開曼群島 / 1</li>
+                    <li>聖多美及普林西比 / 1</li>
+                    <li>多明尼加 / 1</li>
+                    <li>尼泊爾 / 1</li>
+                    <li>法屬玻里尼西亞 / 1</li>
+                    <li>哥倫比亞 / 1</li>
+                    <li>馬爾地夫 / 1</li>
+                    <li>拉脫維亞 / 1</li>
+                    <li>斯洛維尼亞 / 1</li>
+                    <li>中非 / 1</li>
+                    <li>塞席爾 / 1</li>
+                    <li>巴布亞紐幾內亞 / 1</li>
+                    <li>阿布達比 / 1</li>
+                    <li>馬達加斯加 / 1</li>
+                    <li>模里西斯 / 1</li>
+                    <li>蘇丹 / 1</li>
+                    <li>埃及 / 1</li>
+                    <li>索羅門群島 / 1</li>
+                    <li>甘比亞 / 1</li>
+                
+        </ol>
+        </div>
+        <div id="visualization"></div>
+    </div>  
+    <div style="clear:both"></div>
+</div>
+
+   </header>
+</div>
+<div class="copyrights" align = center>2013  ©  公務員出國考察追蹤網  ||  本來源以 <a href="//report.nat.gov.tw/" target="_blank" title="公務出國報告資訊網">公務出國報告資訊網</a> 頒佈為準，資料僅供參考，若有不正確之處請來信（<a href="mailto:abroadplay@groups.facebook.com">abroadplay@groups.facebook.com</a>）與我們反應。 <br/><p class="footer">Page rendered in <strong>0.9801</strong> seconds</p></div> 
+
+</body>
+</html>
